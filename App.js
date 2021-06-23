@@ -1,5 +1,6 @@
 import React, {useRef, useEffect} from 'react';
 import { View , Text, StyleSheet, Animated} from 'react-native';
+import * as Animatable from 'react-native-animatable'
 
 export default function App() {
 
@@ -67,18 +68,12 @@ export default function App() {
 
   return (
     <View style ={styles.container}>
-     
-      <Animated.View 
-      style={{
-        width:porcentagemLargura,
-        height:alturaAnimada,
-        backgroundColor:'red',
-        borderRadius:10,
-        justifyContent:'center',
-        alignItems:'center'}}>
-
-        <Text>...</Text>
-      </Animated.View>
+      
+      <Animatable.Text 
+      style ={{fontSize:30}}
+      animation ='bounce'
+      iterationCount ={2}>OLA</Animatable.Text>
+      
 
     </View>
   );
@@ -91,3 +86,17 @@ const styles = StyleSheet.create({
     alignItems:'center',
   }
 })
+
+/*Componente View animado
+
+<Animated.View 
+      style={{
+        width:porcentagemLargura,
+        height:alturaAnimada,
+        backgroundColor:'red',
+        borderRadius:10,
+        justifyContent:'center',
+        alignItems:'center'}}>
+
+        <Text>...</Text>
+      </Animated.View> */
